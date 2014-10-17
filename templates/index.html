@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="../static/styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../static/styles/main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<title>Pop-up</title>
+</head>
+<body>
+	<div class="page">
+		<div id="first-button" class="page-button">Push me</div>
+		<div id="second-button" class="page-button">Or me</div>
+		<div id="third-button" class="page-button">No, me!</div>
+		<br />
+		<div id="fourth-button" class="page-button">You'll like me</div>
+		<div id="fifth-button" class="page-button">Me me me</div>
+		<div id="sizth" class="page-button">I'm bonus</div>
+
+<!-- 		  margin: auto;
+		  position: absolute;
+		  top: 0; left: 0; bottom: 0; right: 0; -->
+
+		<div id="overlay" class="overlay hidden"></div>
+		<div id="first-popup" class="first-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ первый</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Кросс-браузерность (даже в ИЕ8 работает!)</li>
+						<li class="container__list-item">Достаточно всего одного класса</li>
+						<li class="container__list-item">Отличный способ для центрирования картинок</li>
+						<li class="container__list-item">Легко ресайзится</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Нужно указывать высоту и ширину</li>
+					</ul>
+				</div>
+				<div id="first-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+		<!-- Отрицательные маргины -->
+
+		<div id="second-popup" class="second-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ второй</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Кросс-браузерность (опять же для ИЕ8)</li>
+						<li class="container__list-item">Всего один класс без дополнительной разметки</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Не адаптивненький :с</li>
+						<li class="container__list-item">Нужно задавать размеры блока</li>
+					</ul>
+				</div>
+				<div id="second-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+		<!-- position: fixed; -->
+
+		<div id="third-popup" class="third-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ третий</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Можно юзать max/min-width/height</li>
+						<li class="container__list-item">ИЕ8!</li>
+						<li class="container__list-item">В разметке снова нет дополнительных элементов</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">z-index - это же фу</li>
+					</ul>
+				</div>
+				<div id="third-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+		<!-- transform -->
+
+		<div id="fourth-popup" class="fourth-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ четвертый</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Высоту задавать не нужно</li>
+						<li class="container__list-item">Простая разметка</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Вот тут ИЕ8 в пролёте</li>
+						<li class="container__list-item">Либо много работы руками, либо автопрефиксер нам в помощь</li>
+					</ul>
+				</div>
+				<div id="fourth-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+		<!-- божественные флексбоксы! -->
+
+		<div id="fifth-popup" class="fifth-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ пятый</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Можно забыть про указание размеров блока</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">В старых браузерах, конечно, работать не будет</li>
+						<li class="container__list-item">Море префиксов</li>
+						<li class="container__list-item">Нужен дополнительные элемент в разметке</li>
+					</ul>
+				</div>
+				<div id="fifth-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+		<!-- боготаблички -->
+
+		<div id="sixth-popup" class="second-popup hidden">
+			<div class="container">
+				<h1 class="container__title">Способ пятый</h1>
+				<div class="content-container">
+					<h2 class="container__sub-title">Преимущества</h2>
+					<ul class="container__list">
+						<li class="container__list-item">Можно забыть про указание размеров блока</li>
+					</ul>
+					<h2 class="container__sub-title">Недостатки</h2>
+					<ul class="container__list">
+						<li class="container__list-item">В старых браузерах, конечно, работать не будет</li>
+						<li class="container__list-item">Море префиксов</li>
+						<li class="container__list-item">Нужен дополнительные элемент в разметке</li>
+					</ul>
+				</div>
+				<div id="sixth-popup__button" class="popup-button">Ясно, понятно</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+</body>
+</html>
