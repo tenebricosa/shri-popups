@@ -69,8 +69,9 @@ body {
 	right: 0;
 	bottom: 30px;
 	margin: 0 auto;
-	width: 210px;
+	width: 215px;
 	text-align: center;
+	white-space: nowrap
 }
 .page-button:hover,
 .popup-button:hover,
@@ -204,8 +205,6 @@ body {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-newbox;
-	display: -webkit-new;
-	display: new;
 	-webkit-box-align: center;
 	-moz-box-align: center;
 	-ms-new-align: center;
