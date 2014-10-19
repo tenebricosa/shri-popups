@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -11,20 +11,20 @@
 </head>
 <body>
 	<div class="page">
-		<div id="first-button" class="page-button">Push me</div>
-		<div id="second-button" class="page-button">Or me</div>
-		<div id="third-button" class="page-button">No, me!</div>
+		<div data-for="first-popup" class="page-button">Push me</div>
+		<div data-for="second-popup" class="page-button">Or me</div>
+		<div data-for="third-popup" class="page-button">No, me!</div>
 		<br />
-		<div id="fourth-button" class="page-button">You'll like me</div>
-		<div id="fifth-button" class="page-button">Me me me</div>
-		<div id="sizth" class="page-button">I'm bonus</div>
+		<div data-for="fourth-popup" class="page-button">You'll like me</div>
+		<div data-for="fifth-popup" class="page-button-new">Me me me</div>
+		<div data-for="sixth-popup" class="page-button-new">I'm bonus</div>
 
 <!-- 		  margin: auto;
 		  position: absolute;
 		  top: 0; left: 0; bottom: 0; right: 0; -->
 
 		<div id="overlay" class="overlay hidden"></div>
-		<div id="first-popup" class="first-popup hidden">
+		<div id="first-popup" class="first-popup popup hidden">
 			<div class="container">
 				<h1 class="container__title">Способ первый</h1>
 				<div class="content-container">
@@ -46,7 +46,7 @@
 
 		<!-- Отрицательные маргины -->
 
-		<div id="second-popup" class="second-popup hidden">
+		<div id="second-popup" class="second-popup popup hidden">
 			<div class="container">
 				<h1 class="container__title">Способ второй</h1>
 				<div class="content-container">
@@ -67,7 +67,7 @@
 
 		<!-- position: fixed; -->
 
-		<div id="third-popup" class="third-popup hidden">
+		<div id="third-popup" class="third-popup popup hidden">
 			<div class="container">
 				<h1 class="container__title">Способ третий</h1>
 				<div class="content-container">
@@ -88,7 +88,7 @@
 
 		<!-- transform -->
 
-		<div id="fourth-popup" class="fourth-popup hidden">
+		<div id="fourth-popup" class="fourth-popup popup hidden">
 			<div class="container">
 				<h1 class="container__title">Способ четвертый</h1>
 				<div class="content-container">
@@ -109,43 +109,50 @@
 
 		<!-- божественные флексбоксы! -->
 
-		<div id="fifth-popup" class="fifth-popup hidden">
-			<div class="container">
-				<h1 class="container__title">Способ пятый</h1>
-				<div class="content-container">
-					<h2 class="container__sub-title">Преимущества</h2>
-					<ul class="container__list">
-						<li class="container__list-item">Можно забыть про указание размеров блока</li>
-					</ul>
-					<h2 class="container__sub-title">Недостатки</h2>
-					<ul class="container__list">
-						<li class="container__list-item">В старых браузерах, конечно, работать не будет</li>
-						<li class="container__list-item">Море префиксов</li>
-						<li class="container__list-item">Нужен дополнительные элемент в разметке</li>
-					</ul>
+		<div id="fifth-popup" class="new-container hidden">
+			<div id="fifth-overlay" class="overlay hidden"></div>
+			<div class="fifth-popup new-popup">
+				<div class="container">
+					<h1 class="container__title">Способ пятый</h1>
+					<div class="content-container">
+						<h2 class="container__sub-title">Преимущества</h2>
+						<ul class="container__list">
+							<li class="container__list-item">Можно забыть про указание размеров блока</li>
+						</ul>
+						<h2 class="container__sub-title">Недостатки</h2>
+						<ul class="container__list">
+							<li class="container__list-item">В старых браузерах, конечно, работать не будет</li>
+							<li class="container__list-item">Море префиксов</li>
+							<li class="container__list-item">Нужен дополнительные элемент в разметке</li>
+						</ul>
+					</div>
+					<div id="fifth-popup__button" class="new-popup-button">Ясно, понятно</div>
 				</div>
-				<div id="fifth-popup__button" class="popup-button">Ясно, понятно</div>
 			</div>
 		</div>
 
 		<!-- боготаблички -->
 
-		<div id="sixth-popup" class="second-popup hidden">
-			<div class="container">
-				<h1 class="container__title">Способ пятый</h1>
-				<div class="content-container">
-					<h2 class="container__sub-title">Преимущества</h2>
-					<ul class="container__list">
-						<li class="container__list-item">Можно забыть про указание размеров блока</li>
-					</ul>
-					<h2 class="container__sub-title">Недостатки</h2>
-					<ul class="container__list">
-						<li class="container__list-item">В старых браузерах, конечно, работать не будет</li>
-						<li class="container__list-item">Море префиксов</li>
-						<li class="container__list-item">Нужен дополнительные элемент в разметке</li>
-					</ul>
+		<div id="sixth-popup" class="new-container hidden">
+			<div id="sixth-overlay" class="overlay hidden"></div>
+			<div class="sixth-popup new-popup">
+				<div class="table-container">
+					<div class="container">
+						<h1 class="container__title">Способ шестой</h1>
+						<div class="content-container">
+							<h2 class="container__sub-title">Преимущества</h2>
+							<ul class="container__list">
+								<li class="container__list-item">Высоту легко менять</li>
+								<li class="container__list-item">Олдфажно и кроссбраузерно</li>
+							</ul>
+							<h2 class="container__sub-title">Недостатки</h2>
+							<ul class="container__list">
+								<li class="container__list-item">В разметке требуется аж три элемента</li>
+							</ul>
+						</div>
+						<div id="sixth-popup__button" class="new-popup-button">Ясно, понятно</div>
+					</div>
 				</div>
-				<div id="sixth-popup__button" class="popup-button">Ясно, понятно</div>
 			</div>
 		</div>
 
